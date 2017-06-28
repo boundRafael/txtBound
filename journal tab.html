@@ -15,26 +15,36 @@
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 </ul>
 <h1 align="middle"> Lightbulb </h1>
+ Make the sentence change!
 <button id="hide"> Disappear </button>
 <button id="show"> Appear </button>
 
 <hr> </hr>
-
 <img align="middle" id="lightbulb" onmouseover="changeImage(this)" src="pic_bulbon.gif"
 onmouseout="resetImg(this)" src="pic_bulboff.gif">
+<img align="left" id="lightbulb" onmouseover="changeImage(this)" src="wand.png" width="300px"
+onmouseout="resetImg(this)" src="wizard.png"width="300px">
 
-<script id="lightbulb" type="text/javascript">
+<script id="hide" type="text/javascript">
 function changeImage() {
   document.getElementById('lightbulb').src="pic_bulbon.gif";
 }
 function resetImg() {
   document.getElementById('lightbulb').src="pic_bulboff.gif";
 }
-</script>
-<p id="hide">
-What I enjoyed at camp was the sleep, going to sleep every night was the most relieving part.
-</p>
-<script id="hide" type="text/javascript">
+function changeImage() {
+  document.getElementById('lightbulb').src="wand.png";
+}
+function resetImg() {
+  document.getElementById('lightbulb').src="wizard.png";
+}
+
+ </script>
+ 
+ <p id="hide">
+ What I enjoyed at camp was the sleep, going to sleep every night was the most relieving part.
+ </p>
+<script id="hide">
     $(document).ready(function(){
     $('#hide').click(function(){
     $('p').hide();
@@ -45,9 +55,13 @@ What I enjoyed at camp was the sleep, going to sleep every night was the most re
     $('p').show();
 });
 });
+  $(document).ready(function(){
+    $('#show').mouseover(function(){
+      $('img').animate();
+});
+});
 
 </script>
-
 <style type="text/css">
 body {color:#FFFFFF;}
 a {color:#FFFFFF;}
