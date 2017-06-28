@@ -1,8 +1,7 @@
 <html>
 <head>
-  <style type="text/css">
-  body {color:#FFFFFF;}
-  </style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script>
 </head>
 <body style=background:url("coding.jpg") align="middle">
 <ul id=tabs" align="left">
@@ -15,20 +14,43 @@
   <a href="Tab4.html"> Blogs </a>
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 </ul>
-<h1 align="middle"> Lightbulb</h1>
+<h1 align="middle"> Lightbulb </h1>
+<button id="hide"> Disappear </button>
+<button id="show"> Appear </button>
+
 <hr> </hr>
-<h1> Click on the On button </h1>
-<button onclick="document.getElementById('myImage').src='Lightoff.jpg'">
-On
-</button>
-<img align="middle" id="myImage".src="Light.jpg" style="width:200px">
-<button onclick="document.getElementById('myImage').src='Light.jpg'">
-Off
-</button>
+
+<img align="middle" id="lightbulb" onmouseover="changeImage(this)" src="pic_bulbon.gif"
+onmouseout="resetImg(this)" src="pic_bulboff.gif">
+
+<script id="lightbulb" type="text/javascript">
+function changeImage() {
+  document.getElementById('lightbulb').src="pic_bulbon.gif";
+}
+function resetImg() {
+  document.getElementById('lightbulb').src="pic_bulboff.gif";
+}
+</script>
+<p id="hide">
+What I enjoyed at camp was the sleep, going to sleep every night was the most relieving part.
+</p>
+<script id="hide" type="text/javascript">
+    $(document).ready(function(){
+    $('#hide').click(function(){
+    $('p').hide();
+});
+});
+    $(document).ready(function(){
+    $('#show').click(function(){
+    $('p').show();
+});
+});
+
+</script>
+
 <style type="text/css">
-body {color: #FFFFFF;}
+body {color:#FFFFFF;}
 a {color:#FFFFFF;}
 </style>
 </body>
-</head>
 </html>
