@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+
+       body {color:#FFFFFF;}
+       a {color:#FFFFFF;}
+       </style>
+    </style>
+  </head>
+  <body style=background:url("coding.jpg")>
+  <ul id=tabs">
+<a href="index.html">Me </a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="journal tab.html">Lightbulb </a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="Tab3.html"> Reed Hasting </a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="Tab4.html"> Blogs </a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="Map.html"> Map </a>
+</ul>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 34.011275, lng: -118.262128};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 20,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMPnAUdCCPL5L__kBfxf5JtGu5plwOsWo&callback=initMap">
+    </script>
+  </body>
+</html>
