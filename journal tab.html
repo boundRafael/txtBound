@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script>
 </head>
 <body style=background:url("coding.jpg") align="middle">
 <ul id=tabs">
@@ -19,30 +20,22 @@
  Make the sentence change!
 <button id="hide"> Disappear </button>
 <button id="show"> Appear </button>
-
+<p align="middle" id="hide">
+ What I enjoyed at camp was the sleep, going to sleep every night was the most relieving part.
+ </p>
 <hr> </hr>
-<img align="middle" id="lightbulb" onmouseover="changeImage(this)" src="pic_bulbon.gif"
-onmouseout="resetImg(this)" src="pic_bulboff.gif">
-<img align="left" id="lightbulb" onmouseover="changeImage(this)" src="wand.png" width="300px"
-onmouseout="resetImg(this)" src="wizard.png" width="300px" height="100px">
-
-<script id="hide" type="text/javascript">
-function changeImage() {
+ <img align="middle" id="lightbulb" onmouseover="changeImage(this)" src="pic_bulbon.gif" onmouseout="resetImg(this)" src="pic_bulboff.gif">
+<script type="text/javascript">
+  function changeImage() {
   document.getElementById('lightbulb').src="pic_bulbon.gif";
 }
 function resetImg() {
   document.getElementById('lightbulb').src="pic_bulboff.gif";
 }
-function resetImg() {
-  document.getElementById('lightbulb').src="wizard.png";
-}
+</script>
 
  </script>
-
- <p id="hide">
- What I enjoyed at camp was the sleep, going to sleep every night was the most relieving part.
- </p>
-<script id="hide">
+<script id="hide" type="text/javascript">
     $(document).ready(function(){
     $('#hide').click(function(){
     $('p').hide();
@@ -51,11 +44,6 @@ function resetImg() {
     $(document).ready(function(){
     $('#show').click(function(){
     $('p').show();
-});
-});
-  $(document).ready(function(){
-    $('#show').mouseover(function(){
-      $('img').animate();
 });
 });
 
