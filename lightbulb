@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<title>Artuo's lightbulb</title>
+<h1 align="middle"> Arturo's light bulb </h1>
+<style> h1 {color: white} </style>
+</head>
+
+<style>
+body {
+background: #ffffff url(http://www.flashcoo.com/cartoon/space_1600/images/wallcoo.com_Space_Art_1.jpg) no-repeat ;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+color: lime;}
+body p {color: lime;
+    font-size: 150%}
+</style>
+
+
+<body link=" aqua"; vlink="aqua">
+<li align="middle"><a href="./index.html"> homepage</a></li>
+<p align="middle">hover over lightbulb to get the wand to get bigger.</p>
+
+<p align="middle"><img id="lightbulb" onmouseover="changeImage(this)" src="./bulbOff.png" onmouseout="resetImg(this)" src="./bulbOn.png"></p>
+<p><img id="wand" onmouseover="changeImage(this)" src="./wand.png" onmouseout="resetImg(this)" src="./wand.png"></p>
+<p><img id="wizard" onmouseover="changeImage(this)" src="./wizard.png" onmouseout="resetImg(this)" src="./wizard.png"></p>
+
+<script>
+ $(document).ready(function(){
+   $("#lightbulb").mouseover(function(){
+     $("#lightbulb").attr("src","./bulbOn.png");
+     $('#wand').animate({
+         width: "30%",
+         transform: 'rotate(' + 100 + 'deg)',
+       }, 1000 );
+   });
+
+ $("#lightbulb").mouseout(function(){
+     $("#lightbulb").attr("src","./bulbOff.png");
+     $('#wand').animate({
+         width: "100px",
+         transform: 'rotate(' + 300 + 'deg)',
+       }, 1000 );
+ });
+  })
+ </script>
+
+<button id="hide">HIDE</button>
+<p id="camp" align="middle">In camp I liked to play the human knot game.</p>
+<script type="text/javascript">
+   $(document) .ready (function(){
+    $('#hide').click(function(){
+        $('#camp').hide();
+    });
+   });
+</script>
+<button id="show">SHOW</button>
+<script type="text/javascript">
+    $(document) .ready (function(){
+        $('#show').click(function(){
+            $('#camp').show();
+        });
+    });
+</script>
+
+
+</body>
+</html>

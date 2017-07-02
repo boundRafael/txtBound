@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<style type="text/css">
+body {color: #FFFFFF;}
+a {color: #FFFFFF;}
+</style>
+</head>
+
+<body style=background:url("coding.jpg") align="middle">
+
+  <ul id=tabs">
+  <a href="index.html">Me </a>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="journal tab.html">Lightbulb </a>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="Tab3.html"> Reed Hasting </a>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="Tab4.html"> Blogs </a>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="Map.html"> Map </a>
+  </ul>
+<h1 align="middle"> Lightulb </h1>
+<h2> Make the sentence hide! </h2>
+<button id="hide">HIDE</button>
+<button id="show">SHOW</button>
+<hr> </hr>
+<p id="camp" align="middle">In camp I enjoyed the sleep, it was the most relieving part of the day</p>
+<h1> Touch the lightbulb!! </h1>
+<p align="middle"><img id="lightbulb" onmouseover="changeImage(this)" src="./pic_bulboff.gif" onmouseout="resetImg(this)" src="./pic_bulbon.gif"></p>
+<p><img id="wand" onmouseover="changeImage(this)" src="./wand.png" onmouseout="resetImg(this)" src="./wand.png"> <img id="wizard" onmouseover="changeImage(this)" src="./patronus.png" onmouseout="resetImg(this)" src="./patronus.png">
+ <img id="wizard" onmouseover="changeImage(this)" src="./patronus2.png" onmouseout="resetImg(this)" src="./patronus2.png"></p>
+<p><img id="wizard" onmouseover="changeImage(this)" src="./wizard.png" onmouseout="resetImg(this)" src="./wizard.png"></p>
+<script>
+ $(document).ready(function(){
+   $("#lightbulb").mouseover(function(){
+     $("#lightbulb").attr("src","./pic_bulbon.gif");
+     $('#wand').animate({
+         width: "30%",
+         transform: 'rotate(' + 100 + 'deg)',
+       }, 1000 );
+   });
+
+ $("#lightbulb").mouseout(function(){
+     $("#lightbulb").attr("src","./pic_bulboff.gif");
+     $('#wand').animate({
+         width: "100px",
+         transform: 'rotate(' + 300 + 'deg)',
+       }, 1000 );
+ });
+  })
+ </script>
+
+
+<script type="text/javascript">
+   $(document) .ready (function(){
+    $('#hide').click(function(){
+        $('#camp').hide();
+    });
+   });
+</script>
+<script type="text/javascript">
+    $(document) .ready (function(){
+        $('#show').click(function(){
+            $('#camp').show();
+        });
+    });
+</script>
+
+
+</body>
+</html>
