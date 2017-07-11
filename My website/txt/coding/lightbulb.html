@@ -8,7 +8,7 @@ a {color: #FFFFFF;}
 </style>
 </head>
 
-<body style=background:url("coding.jpg") align="middle">
+<body style=background:url("../images/coding.jpg") align="middle">
 
   <ul id=tabs">
   <a href="index.html">Me </a>
@@ -28,14 +28,14 @@ a {color: #FFFFFF;}
 <hr> </hr>
 <p id="camp" align="middle">In camp I enjoyed the sleep, it was the most relieving part of the day</p>
 <h1> Touch the lightbulb!! </h1>
-<p align="middle"><img id="lightbulb" onmouseover="changeImage(this)" src="./pic_bulboff.gif" onmouseout="resetImg(this)" src="./pic_bulbon.gif"></p>
-<p><img id="wand" onmouseover="changeImage(this)" src="./wand.png" onmouseout="resetImg(this)" src="./wand.png"> <img id="wizard" onmouseover="changeImage(this)" src="./patronus.png" onmouseout="resetImg(this)" src="./patronus.png">
- <img id="wizard" onmouseover="changeImage(this)" src="./patronus2.png" onmouseout="resetImg(this)" src="./patronus2.png"></p>
-<p><img id="wizard" onmouseover="changeImage(this)" src="./wizard.png" onmouseout="resetImg(this)" src="./wizard.png"></p>
+<p align="middle"><img id="lightbulb" onmouseover="changeImage(this)" src="../images/pic_bulboff.gif" onmouseout="resetImg(this)" src="../images/pic_bulbon.gif"></p>
+<p><img id="wand" onmouseover="changeImage(this)" src="../images/wand.png" onmouseout="resetImg(this)" src="../images/wand.png"> <img id="wizard" onmouseover="changeImage(this)" src="../images/patronus.png" onmouseout="resetImg(this)" src="../images/patronus.png">
+ <img id="wizard" onmouseover="changeImage(this)" src="../images/patronus2.png" onmouseout="resetImg(this)" src="../images/patronus2.png"></p>
+<p><img id="wizard" onmouseover="changeImage(this)" src="../images/wizard.png" onmouseout="resetImg(this)" src="../images/wizard.png"></p>
 <script>
  $(document).ready(function(){
    $("#lightbulb").mouseover(function(){
-     $("#lightbulb").attr("src","./pic_bulbon.gif");
+     $("#lightbulb").attr("src","../images/pic_bulbon.gif");
      $('#wand').animate({
          width: "30%",
          transform: 'rotate(' + 100 + 'deg)',
@@ -43,7 +43,7 @@ a {color: #FFFFFF;}
    });
 
  $("#lightbulb").mouseout(function(){
-     $("#lightbulb").attr("src","./pic_bulboff.gif");
+     $("#lightbulb").attr("src","../images/pic_bulboff.gif");
      $('#wand').animate({
          width: "100px",
          transform: 'rotate(' + 300 + 'deg)',
